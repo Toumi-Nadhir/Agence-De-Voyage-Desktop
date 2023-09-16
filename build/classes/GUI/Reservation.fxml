@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.ReservationController">
+    
+    
+   <children>
+      <TableView fx:id="reservTable" layoutX="344.0" layoutY="111.0" onMouseClicked="#getSelected" prefHeight="410.0" prefWidth="458.0">
+        <columns>
+            <TableColumn fx:id="id_re" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="id_re" />
+            <TableColumn fx:id="idEv" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="id_even" />
+            <TableColumn fx:id="montant" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="montant" />
+            <TableColumn fx:id="dure" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="Dure" />
+        </columns>
+      </TableView>
+      <Pane layoutY="59.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gestion des reservations" wrappingWidth="432.13671875">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="602.0" layoutY="-1.0" prefHeight="36.0" prefWidth="37.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="34.0" layoutY="73.0" prefHeight="76.0" prefWidth="100.0">
+         <children>
+            <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="65.0" onMouseClicked="#refreshChamp" size="45" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#455a64" glyphName="PRINT" layoutX="62.0" layoutY="65.0" onMouseClicked="#print" size="45" styleClass="btn" />
+         </children>
+      </HBox>
+      <HBox layoutX="8.0" layoutY="510.0" prefHeight="46.0" prefWidth="295.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addReservation" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #0080FF;" text="Ajouter" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#updateReservation" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #F9A521;" text="Modifier" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#deleteReservation" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #FF0000;" text="Supprimer" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+     
+      <HBox layoutX="14.0" layoutY="149.0" prefHeight="43.0" prefWidth="282.0">
+         <children>
+            <TextField fx:id="id_res" prefHeight="34.0" prefWidth="149.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="366.0" layoutY="62.0" prefHeight="34.0" prefWidth="330.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="search" onMouseClicked="#rechercheRq" prefHeight="29.0" prefWidth="215.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+     
+      <HBox layoutX="15.0" layoutY="407.0" prefHeight="76.0" prefWidth="282.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="dure" wrappingWidth="143.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="dure_t" prefHeight="42.0" prefWidth="138.0" />
+           
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="339.0" prefHeight="46.0" prefWidth="282.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="montant" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="montant_t" prefHeight="37.0" prefWidth="160.0" />
+         </children></HBox>
+      <TextField fx:id="id_v" layoutX="143.0" layoutY="249.0" prefHeight="37.0" prefWidth="160.0" />
+      <Text layoutX="14.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id_even" wrappingWidth="120.13671875">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

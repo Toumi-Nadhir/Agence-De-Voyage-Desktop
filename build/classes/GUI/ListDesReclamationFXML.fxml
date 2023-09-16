@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="gestionuyilisateur.com.esprit.GUI.ListDesReclamationFXMLController">
+   <children>
+      <TableView fx:id="reclamtionTableView" layoutX="23.0" layoutY="81.0" prefHeight="303.0" prefWidth="696.0">
+        <columns>
+            <TableColumn fx:id="reclamationIdColumn" prefWidth="133.0" text="Reclamation ID" />
+            <TableColumn fx:id="userIdColumn" prefWidth="61.0" text="User ID" />
+            <TableColumn fx:id="SubjectColumn" prefWidth="167.0" text="Subject" />
+          <TableColumn fx:id="messageColumn" prefWidth="334.0" text="Message" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="40.0" prefHeight="17.0" prefWidth="72.0" text="Search:" />
+      <TextField fx:id="searchTextField" layoutX="137.0" layoutY="36.0" prefHeight="25.0" prefWidth="294.0" promptText="search..." />
+   </children>
+</AnchorPane>

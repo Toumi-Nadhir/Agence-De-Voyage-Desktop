@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TransportController">
+   <children>
+      <MenuBar layoutX="36.0" layoutY="16.0" prefHeight="25.0" prefWidth="291.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Chauffeur">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#lanceAjoutChauffeur" text="Ajouter un chauffeur" />
+                  <MenuItem mnemonicParsing="false" onAction="#lanceModifChauffeur" text="Chercher un chauffeur" />
+                  <MenuItem mnemonicParsing="false" onAction="#lanceAfficheChauffeur" text="Afficher un chauffeur" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Voiture">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#lanceAjoutVoiture" text="Ajouter une voiture" />
+                  <MenuItem mnemonicParsing="false" onAction="#lancecherchervoiture" text="Chercher une voiture" />
+                  <MenuItem mnemonicParsing="false" onAction="#lanceAfficheVoiture" text="Liste des voitures" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reservation">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#lanceAjoutReservation" text="Effectuer une réservation" />
+                  <MenuItem mnemonicParsing="false" onAction="#lanceAfficheReservation" text="Afficher la liste des réservations" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Quitter">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#quitter" text="Fermer la fenêtre" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="436.0" layoutY="16.0" prefHeight="47.0" prefWidth="164.0" text="Gestion de transport" />
+      <AnchorPane fx:id="rootPane" layoutX="21.0" layoutY="48.0" prefHeight="347.0" prefWidth="573.0" />
+   </children>
+</AnchorPane>

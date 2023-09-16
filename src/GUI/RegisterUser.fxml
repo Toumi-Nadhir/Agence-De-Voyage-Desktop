@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RegisterUserController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="406.0" prefWidth="606.0">
+         <children>
+            <Text fill="#0a0a0a" layoutX="207.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remplir le Formulaire SVP !" textAlignment="CENTER" wrappingWidth="230.13671875">
+               <font>
+                  <Font size="23.0" />
+               </font></Text>
+            <Label fx:id="labelNom" layoutX="38.0" layoutY="126.0" prefHeight="17.0" prefWidth="44.0" text="Nom :" />
+            <TextField fx:id="NomField" layoutX="127.0" layoutY="125.0" prefHeight="25.0" prefWidth="148.0" />
+            <Label fx:id="labelPrenom" layoutX="38.0" layoutY="220.0" prefHeight="17.0" prefWidth="55.0" text="Prenom :" />
+            <TextField fx:id="PrenomField" layoutX="127.0" layoutY="217.0" prefHeight="25.0" prefWidth="148.0" />
+            <Label fx:id="LabelEmail" layoutX="38.0" layoutY="173.0" prefHeight="17.0" prefWidth="44.0" text="Email :" />
+            <TextField fx:id="EmailField" layoutX="127.0" layoutY="172.0" prefHeight="25.0" prefWidth="148.0" />
+            <Label fx:id="LabelPassword" layoutX="38.0" layoutY="260.0" prefHeight="17.0" prefWidth="55.0" text="Password:" />
+            <Label fx:id="ImageName" layoutX="428.0" layoutY="129.0" prefHeight="17.0" prefWidth="142.0" text="Label" />
+            <ImageView fx:id="UserImg" fitHeight="138.0" fitWidth="186.0" layoutX="360.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+            <PasswordField fx:id="PasswordField" layoutX="127.0" layoutY="257.0" prefHeight="25.0" prefWidth="148.0" />
+            <Button fx:id="RegisterButton" layoutX="275.0" layoutY="344.0" mnemonicParsing="false" onAction="#register" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #0A75AD;" text="register" textAlignment="RIGHT" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="upload" layoutX="331.0" layoutY="125.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #0A75AD;" text="upload" textAlignment="RIGHT" textFill="WHITE" />
+            <Text fill="#1118d1" layoutX="22.0" layoutY="368.0" onMouseClicked="#GoToLogin" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous avez deja un compt ?" textAlignment="CENTER" underline="true" />
+            <Line endX="22.0" endY="223.0" layoutX="285.0" layoutY="95.0" startX="22.0" startY="15.0" />
+            <Label layoutX="46.0" layoutY="303.0" text="Role:" />
+            <ComboBox fx:id="roleChoice" layoutX="126.0" layoutY="300.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
